@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF3E3E3E"
+    android:padding="@dimen/ad_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/ad_content_padding">
+
+            <ImageView
+                android:id="@+id/ad_app_icon"
+                android:layout_width="@dimen/ad_icon_size"
+                android:layout_height="@dimen/ad_icon_size"
+                android:contentDescription="Ad icon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/ad_icon_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/ad_headline_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ad_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFCCCCCC"
+                    android:textSize="@dimen/ad_body_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/ad_media"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ad_media_height"
+            android:layout_marginTop="@dimen/ad_media_margin" />
+
+        <Button
+            android:id="@+id/ad_call_to_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ad_button_margin"
+            android:background="#FFD4AF37"
+            android:textColor="#FF000000"
+            android:textSize="@dimen/ad_button_text_size" />
+
+    </LinearLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>

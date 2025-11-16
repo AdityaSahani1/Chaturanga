@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+    
+}
+
+android {
+    namespace 'com.adisoftc.chaturanga'
+    compileSdk 33
+    
+    defaultConfig {
+        applicationId "com.adisoftc.chaturanga"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        
+        vectorDrawables { 
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding true
+        
+    }
+    
+}
+
+dependencies {
+    // AndroidX libraries
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    
+    // Google Play Services - AdMob
+    implementation 'com.google.android.gms:play-services-ads:22.4.0'
+    
+    // Google Play In-App Updates API
+    implementation 'com.google.android.play:app-update:2.1.0'
+}

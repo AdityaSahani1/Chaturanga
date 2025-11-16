@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary App Colors -->
+    <color name="primary_gold">#D4AF37</color>
+    <color name="dark_background">#2F2F2F</color>
+    <color name="darker_background">#1E1E1E</color>
+    
+    <!-- Board Colors -->
+    <color name="light_square">#F0D9B5</color>
+    <color name="dark_square">#B58863</color>
+    <color name="highlight_color">#8800FF00</color>
+    <color name="move_indicator">#88FFFF00</color>
+    
+    <!-- Player Colors (4-player mode) -->
+    <color name="player_south">#D4AF37</color>
+    <color name="player_west">#8B4513</color>
+    <color name="player_north">#2F4F4F</color>
+    <color name="player_east">#8B0000</color>
+    
+    <!-- Chess Colors (2-player mode) -->
+    <color name="player_white">#FFFFFF</color>
+    <color name="player_black">#000000</color>
+    
+    <!-- UI Colors -->
+    <color name="button_background">#D4AF37</color>
+    <color name="button_text">#000000</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#CCCCCC</color>
+    <color name="text_hint">#888888</color>
+    <color name="input_background">#444444</color>
+    
+    <!-- Status Colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="error_red">#F44336</color>
+    <color name="warning_yellow">#FFD700</color>
+</resources>

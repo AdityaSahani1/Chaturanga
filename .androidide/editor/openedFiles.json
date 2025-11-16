@@ -1,0 +1,140 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/values/ic_launcher_background.xml",
+      "selection": {
+        "end": {
+          "column": 12,
+          "index": 120,
+          "line": 3
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "selection": {
+        "end": {
+          "column": 16,
+          "index": 265,
+          "line": 4
+        },
+        "start": {
+          "column": 16,
+          "index": 265,
+          "line": 4
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "selection": {
+        "end": {
+          "column": 16,
+          "index": 265,
+          "line": 4
+        },
+        "start": {
+          "column": 16,
+          "index": 265,
+          "line": 4
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/values/strings.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 2670,
+          "line": 60
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/layout/native_ad_layout.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 1918,
+          "line": 50
+        },
+        "start": {
+          "column": 0,
+          "index": 1918,
+          "line": 50
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/java/com/adisoftc/chaturanga/utils/AnimationHelper.java",
+      "selection": {
+        "end": {
+          "column": 16,
+          "index": 5155,
+          "line": 126
+        },
+        "start": {
+          "column": 16,
+          "index": 5155,
+          "line": 126
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/values/colors.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 1337,
+          "line": 36
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/values/dimens.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 1994,
+          "line": 54
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/values-sw600dp/dimens.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Chaturanga/app/src/main/res/values-sw600dp/dimens.xml"
+}

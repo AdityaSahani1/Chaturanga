@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chaturanga: Ancient Game of Kings</string>
+    
+    <!-- Main Menu -->
+    <string name="btn_4player_dice">4-Player Chaturanga (Dice Mode)</string>
+    <string name="btn_4player_strategic">4-Player Chaturanga (Strategic)</string>
+    <string name="btn_persian">Persian Shatranj (2-Player)</string>
+    <string name="btn_chess">Modern Chess (2-Player)</string>
+    <string name="btn_tutorial">Tutorial - How to Play</string>
+    <string name="btn_history">History of Chaturanga</string>
+    <string name="btn_feedback">Send Feedback</string>
+    
+    <!-- Game Activity -->
+    <string name="current_player">Current Player: %s</string>
+    <string name="roll_dice">Roll Dice</string>
+    <string name="dice_result">Dice: %1$d - Move %2$s</string>
+    <string name="no_valid_moves">No valid moves! Turn skipped.</string>
+    <string name="roll_to_continue">Roll the dice to continue</string>
+    
+    <!-- Game Over -->
+    <string name="game_over_title">Game Over</string>
+    <string name="winner_message">%s wins!</string>
+    <string name="draw_message">Game Over - Draw!</string>
+    <string name="btn_new_game">New Game</string>
+    <string name="btn_main_menu">Main Menu</string>
+    
+    <!-- Tutorial -->
+    <string name="tutorial_title">Tutorial - How to Play</string>
+    
+    <!-- History -->
+    <string name="history_title">History of Chaturanga</string>
+    
+    <!-- Feedback -->
+    <string name="feedback_title">Send Feedback</string>
+    <string name="name_label">Name (Optional)</string>
+    <string name="email_label">Email (Optional)</string>
+    <string name="feedback_label">Your Feedback</string>
+    <string name="hint_name">Your name</string>
+    <string name="hint_email">your@email.com</string>
+    <string name="hint_feedback">Tell us what you think...</string>
+    <string name="btn_submit">Submit Feedback</string>
+    <string name="feedback_required">Please enter your feedback</string>
+    <string name="feedback_thanks">Thank you for your feedback!</string>
+    
+    <!-- Piece Names -->
+    <string name="piece_raja">King</string>
+    <string name="piece_ratha">Chariot</string>
+    <string name="piece_gaja">Elephant</string>
+    <string name="piece_ashva">Horse</string>
+    <string name="piece_padati">Pawn</string>
+    <string name="piece_queen">Queen</string>
+    <string name="piece_bishop">Bishop</string>
+    <string name="piece_knight">Knight</string>
+    <string name="piece_rook">Rook</string>
+    
+    <!-- Ad related -->
+    <string name="ad_loading">Loading ad...</string>
+    <string name="ad_failed">Ad failed to load</string>
+</resources>

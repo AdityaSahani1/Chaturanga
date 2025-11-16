@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensions for 7" tablets -->
+    
+    <!-- Spacing -->
+    <dimen name="spacing_tiny">6dp</dimen>
+    <dimen name="spacing_small">12dp</dimen>
+    <dimen name="spacing_medium">24dp</dimen>
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_xlarge">48dp</dimen>
+    
+    <!-- Padding -->
+    <dimen name="padding_small">12dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="activity_padding">60dp</dimen>
+    
+    <!-- Text Sizes -->
+    <dimen name="text_size_tiny">14sp</dimen>
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xlarge">24sp</dimen>
+    <dimen name="text_size_title">28sp</dimen>
+    <dimen name="text_size_display">32sp</dimen>
+    
+    <!-- Button -->
+    <dimen name="button_padding_vertical">40dp</dimen>
+    <dimen name="button_padding_horizontal">30dp</dimen>
+    <dimen name="button_margin_bottom">24dp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    
+    <!-- Board -->
+    <dimen name="board_padding">30dp</dimen>
+    <dimen name="square_size">100dp</dimen>
+    <dimen name="piece_text_size">64sp</dimen>
+    
+    <!-- Native Ad -->
+    <dimen name="ad_padding">16dp</dimen>
+    <dimen name="ad_content_padding">12dp</dimen>
+    <dimen name="ad_icon_size">48dp</dimen>
+    <dimen name="ad_icon_margin">16dp</dimen>
+    <dimen name="ad_media_height">250dp</dimen>
+    <dimen name="ad_media_margin">12dp</dimen>
+    <dimen name="ad_button_margin">12dp</dimen>
+    <dimen name="ad_headline_text_size">18sp</dimen>
+    <dimen name="ad_body_text_size">16sp</dimen>
+    <dimen name="ad_button_text_size">16sp</dimen>
+</resources>

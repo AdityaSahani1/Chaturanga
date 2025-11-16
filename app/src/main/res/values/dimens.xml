@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default dimensions for phones -->
+    
+    <!-- Spacing -->
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+    
+    <!-- Padding -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="activity_padding">40dp</dimen>
+    
+    <!-- Text Sizes -->
+    <dimen name="text_size_tiny">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_display">28sp</dimen>
+    
+    <!-- Button -->
+    <dimen name="button_padding_vertical">30dp</dimen>
+    <dimen name="button_padding_horizontal">20dp</dimen>
+    <dimen name="button_margin_bottom">20dp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+    
+    <!-- Board -->
+    <dimen name="board_padding">20dp</dimen>
+    <dimen name="square_size">80dp</dimen>
+    <dimen name="piece_text_size">48sp</dimen>
+    
+    <!-- Native Ad -->
+    <dimen name="ad_padding">12dp</dimen>
+    <dimen name="ad_content_padding">8dp</dimen>
+    <dimen name="ad_icon_size">40dp</dimen>
+    <dimen name="ad_icon_margin">12dp</dimen>
+    <dimen name="ad_media_height">200dp</dimen>
+    <dimen name="ad_media_margin">8dp</dimen>
+    <dimen name="ad_button_margin">8dp</dimen>
+    <dimen name="ad_headline_text_size">16sp</dimen>
+    <dimen name="ad_body_text_size">14sp</dimen>
+    <dimen name="ad_button_text_size">14sp</dimen>
+    
+    <!-- Input Fields -->
+    <dimen name="input_padding">20dp</dimen>
+    <dimen name="input_margin_top">20dp</dimen>
+    <dimen name="input_min_lines">5</dimen>
+</resources>
