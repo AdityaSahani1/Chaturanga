@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_title"
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/primary_gold"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_label"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingTop="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_tiny"/>
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/edittext_background"
+            android:padding="@dimen/input_padding"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_label"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingTop="@dimen/input_margin_top"
+            android:paddingBottom="@dimen/spacing_tiny"/>
+
+        <EditText
+            android:id="@+id/email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/edittext_background"
+            android:padding="@dimen/input_padding"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_label"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingTop="@dimen/input_margin_top"
+            android:paddingBottom="@dimen/spacing_tiny"/>
+
+        <EditText
+            android:id="@+id/feedback_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_feedback"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/edittext_background"
+            android:padding="@dimen/input_padding"
+            android:minLines="5"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:id="@+id/submit_button"
+            style="@style/GameModeButton"
+            android:text="@string/btn_submit"
+            android:layout_marginTop="@dimen/spacing_large"/>
+
+    </LinearLayout>
+
+</ScrollView>

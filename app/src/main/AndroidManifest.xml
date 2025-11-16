@@ -7,8 +7,9 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Chaturanga: Ancient Game of Kings"
-        android:theme="@android:style/Theme.Material.Light.DarkActionBar">
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true">
         
         <activity
             android:name=".MainActivity"

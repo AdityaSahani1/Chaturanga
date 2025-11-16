@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <group
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:translateX="10.8"
+        android:translateY="10.8">
+        
+        <!-- Crown base (represents royalty - King piece) -->
+        <path
+            android:fillColor="#D4AF37"
+            android:pathData="M30,75 L78,75 L75,85 L33,85 Z"/>
+        
+        <!-- Crown middle -->
+        <path
+            android:fillColor="#D4AF37"
+            android:pathData="M28,65 L80,65 L78,75 L30,75 Z"/>
+        
+        <!-- Crown points -->
+        <path
+            android:fillColor="#D4AF37"
+            android:pathData="M25,50 L35,65 L28,65 Z
+                         M45,45 L55,65 L45,65 Z
+                         M65,50 L73,65 L63,65 Z
+                         M80,55 L80,65 L75,65 Z"/>
+        
+        <!-- Chess board pattern behind (4 squares) -->
+        <path
+            android:fillColor="#B58863"
+            android:pathData="M35,30 L45,30 L45,40 L35,40 Z
+                         M55,30 L65,30 L65,40 L55,40 Z
+                         M45,40 L55,40 L55,50 L45,50 Z"/>
+        
+        <path
+            android:fillColor="#F0D9B5"
+            android:pathData="M45,30 L55,30 L55,40 L45,40 Z
+                         M35,40 L45,40 L45,50 L35,50 Z
+                         M55,40 L65,40 L65,50 L55,50 Z"/>
+        
+        <!-- Center jewel on crown -->
+        <path
+            android:fillColor="#FF4444"
+            android:pathData="M50,48 L54,58 L50,62 L46,58 Z"/>
+        
+    </group>
+</vector>

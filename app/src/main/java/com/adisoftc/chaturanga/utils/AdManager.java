@@ -3,6 +3,7 @@ package com.adisoftc.chaturanga.utils;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.widget.RatingBar;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import com.google.android.gms.ads.AdError;
@@ -251,6 +252,43 @@ public class AdManager {
     }
     
     private static void populateNativeAdView(NativeAd nativeAd, NativeAdView adView) {
+        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
+        adView.setBodyView(adView.findViewById(R.id.ad_body));
+        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
+        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
+        adView.setMediaView((com.google.android.gms.ads.nativead.MediaView) adView.findViewById(R.id.ad_media));
+        adView.setStarRatingView(adView.findViewById(R.id.ad_stars));
+        
+        ((android.widget.TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
+        
+        if (nativeAd.getBody() != null) {
+            adView.getBodyView().setVisibility(View.VISIBLE);
+            ((android.widget.TextView) adView.getBodyView()).setText(nativeAd.getBody());
+        } else {
+            adView.getBodyView().setVisibility(View.INVISIBLE);
+        }
+        
+        if (nativeAd.getCallToAction() != null) {
+            adView.getCallToActionView().setVisibility(View.VISIBLE);
+            ((android.widget.Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
+        } else {
+            adView.getCallToActionView().setVisibility(View.INVISIBLE);
+        }
+        
+        if (nativeAd.getIcon() != null) {
+            ((android.widget.ImageView) adView.getIconView()).setImageDrawable(nativeAd.getIcon().getDrawable());
+            adView.getIconView().setVisibility(View.VISIBLE);
+        } else {
+            adView.getIconView().setVisibility(View.GONE);
+        }
+        
+        if (nativeAd.getStarRating() != null) {
+            ((android.widget.RatingBar) adView.getStarRatingView()).setRating(nativeAd.getStarRating().floatValue());
+            adView.getStarRatingView().setVisibility(View.VISIBLE);
+        } else {
+            adView.getStarRatingView().setVisibility(View.GONE);
+        }
+        
         adView.setNativeAd(nativeAd);
     }
     

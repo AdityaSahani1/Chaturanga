@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_display"
+            android:textColor="@color/primary_gold"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="@dimen/spacing_large"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="चतुरंग"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textColor="@color/text_secondary"
+            android:textStyle="italic"
+            android:paddingBottom="@dimen/spacing_xlarge"/>
+
+        <Button
+            android:id="@+id/btn_4player_dice"
+            style="@style/GameModeButton"
+            android:text="@string/btn_4player_dice"
+            android:drawableStart="@android:drawable/star_big_on"
+            android:drawablePadding="@dimen/spacing_small"/>
+
+        <Button
+            android:id="@+id/btn_4player_strategic"
+            style="@style/GameModeButton"
+            android:text="@string/btn_4player_strategic"
+            android:drawableStart="@android:drawable/star_big_on"
+            android:drawablePadding="@dimen/spacing_small"/>
+
+        <Button
+            android:id="@+id/btn_persian"
+            style="@style/GameModeButton"
+            android:text="@string/btn_persian"/>
+
+        <Button
+            android:id="@+id/btn_chess"
+            style="@style/GameModeButton"
+            android:text="@string/btn_chess"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primary_gold"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:alpha="0.3"/>
+
+        <Button
+            android:id="@+id/btn_tutorial"
+            style="@style/SecondaryButton"
+            android:text="@string/btn_tutorial"/>
+
+        <Button
+            android:id="@+id/btn_history"
+            style="@style/SecondaryButton"
+            android:text="@string/btn_history"/>
+
+        <Button
+            android:id="@+id/btn_feedback"
+            style="@style/SecondaryButton"
+            android:text="@string/btn_feedback"/>
+
+    </LinearLayout>
+
+</ScrollView>

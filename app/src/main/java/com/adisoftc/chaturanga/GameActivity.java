@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Gravity;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,6 +26,7 @@ public class GameActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
         
         handler = new Handler();
         
@@ -36,53 +36,31 @@ public class GameActivity extends Activity {
         gameState = new GameState(mode);
         ai = new ChaturangaAI(1);
         
-        LinearLayout mainLayout = new LinearLayout(this);
-        mainLayout.setOrientation(LinearLayout.VERTICAL);
-        mainLayout.setBackgroundColor(0xFF1E1E1E);
+        // Initialize views
+        statusText = findViewById(R.id.status_text);
+        diceResultText = findViewById(R.id.dice_result_text);
+        boardView = findViewById(R.id.board_view);
+        diceButton = findViewById(R.id.dice_button);
         
-        statusText = new TextView(this);
-        statusText.setText("Current Player: " + gameState.getCurrentPlayer().getName());
-        statusText.setTextSize(18);
-        statusText.setTextColor(0xFFFFFFFF);
-        statusText.setPadding(20, 20, 20, 20);
-        statusText.setGravity(Gravity.CENTER);
-        
-        diceResultText = new TextView(this);
-        diceResultText.setText("");
-        diceResultText.setTextSize(16);
-        diceResultText.setTextColor(0xFFFFD700);
-        diceResultText.setPadding(20, 10, 20, 10);
-        diceResultText.setGravity(Gravity.CENTER);
-        
-        boardView = new BoardView(this, null);
+        // Set up board
         boardView.setGameState(gameState);
+        statusText.setText("Current Player: " + gameState.getCurrentPlayer().getName());
         
-        LinearLayout.LayoutParams boardParams = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            0,
-            1.0f
-        );
-        boardView.setLayoutParams(boardParams);
-        
-        diceButton = new Button(this);
-        diceButton.setText("Roll Dice");
-        diceButton.setTextSize(18);
-        diceButton.setPadding(20, 30, 20, 30);
-        diceButton.setBackgroundColor(0xFFD4AF37);
-        diceButton.setTextColor(0xFF000000);
-        
-        LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        );
-        btnParams.setMargins(40, 20, 40, 20);
-        diceButton.setLayoutParams(btnParams);
-        
-        if (!mode.usesDice()) {
-            diceButton.setVisibility(Button.GONE);
+        // Set up dice button
+        if (mode.usesDice()) {
+            diceButton.setVisibility(Button.VISIBLE);
+            diceResultText.setVisibility(TextView.VISIBLE);
+            diceButton.setEnabled(true);
         }
         
         diceButton.setOnClickListener(v -> rollDice());
+        
+        // Set up undo and menu buttons
+        findViewById(R.id.btn_undo).setOnClickListener(v -> {
+            Toast.makeText(this, "Undo feature coming soon!", Toast.LENGTH_SHORT).show();
+        });
+        
+        findViewById(R.id.btn_menu).setOnClickListener(v -> finish());
         
         boardView.setOnMoveListener(new BoardView.OnMoveListener() {
             @Override
@@ -96,16 +74,7 @@ public class GameActivity extends Activity {
             }
         });
         
-        mainLayout.addView(statusText);
-        mainLayout.addView(diceResultText);
-        mainLayout.addView(boardView);
-        mainLayout.addView(diceButton);
-        
-        setContentView(mainLayout);
-        
-        if (mode.usesDice()) {
-            diceButton.setEnabled(true);
-        } else {
+        if (!mode.usesDice()) {
             checkAITurn();
         }
     }

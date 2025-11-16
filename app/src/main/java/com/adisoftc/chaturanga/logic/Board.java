@@ -35,9 +35,9 @@ public class Board {
         activePlayers.add(Player.EAST);
         
         setupPlayerArmy(Player.SOUTH, 0, 0);
-        setupPlayerArmy(Player.WEST, 4, 0);
-        setupPlayerArmy(Player.NORTH, 4, 4);
-        setupPlayerArmy(Player.EAST, 0, 4);
+        setupPlayerArmy(Player.WEST, 0, 6);
+        setupPlayerArmy(Player.NORTH, 6, 6);
+        setupPlayerArmy(Player.EAST, 6, 0);
     }
     
     private void setupPlayerArmy(Player player, int startRow, int startCol) {
@@ -75,8 +75,8 @@ public class Board {
         activePlayers.add(Player.BLACK);
         
         PieceType[] backRow = {
-            PieceType.ROOK, PieceType.KNIGHT, PieceType.BISHOP, PieceType.QUEEN,
-            PieceType.RAJA, PieceType.BISHOP, PieceType.KNIGHT, PieceType.ROOK
+            PieceType.ROOK, PieceType.KNIGHT, PieceType.BISHOP, PieceType.RAJA,
+            PieceType.QUEEN, PieceType.BISHOP, PieceType.KNIGHT, PieceType.ROOK
         };
         
         for (int col = 0; col < 8; col++) {
@@ -92,8 +92,8 @@ public class Board {
         activePlayers.add(Player.BLACK);
         
         PieceType[] backRow = {
-            PieceType.RATHA, PieceType.ASHVA, PieceType.GAJA, PieceType.RAJA,
-            PieceType.QUEEN, PieceType.GAJA, PieceType.ASHVA, PieceType.RATHA
+            PieceType.RATHA, PieceType.ASHVA, PieceType.GAJA, PieceType.QUEEN,
+            PieceType.RAJA, PieceType.GAJA, PieceType.ASHVA, PieceType.RATHA
         };
         
         for (int col = 0; col < 8; col++) {
