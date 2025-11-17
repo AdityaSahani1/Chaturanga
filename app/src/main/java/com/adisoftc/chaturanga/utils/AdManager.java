@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.RatingBar;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import com.adisoftc.chaturanga.R;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;

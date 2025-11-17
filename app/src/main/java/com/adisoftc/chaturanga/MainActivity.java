@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.adisoftc.chaturanga.utils.UpdateManager;
+import com.adisoftc.chaturanga.utils.AdManager;
+import com.adisoftc.chaturanga.utils.SoundManager;
 
 public class MainActivity extends Activity {
     
@@ -16,7 +19,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        // Initialize update manager and check for updates
+        AdManager.initializeAds(this);
+        SoundManager.loadSounds(this);
+        
+        LinearLayout adContainer = findViewById(R.id.ad_container);
+        if (adContainer != null) {
+            AdManager.loadBannerAd(this, adContainer);
+        }
+        
+        AdManager.loadInterstitialAd(this);
+        
         updateManager = new UpdateManager(this);
         updateManager.checkForUpdate();
         

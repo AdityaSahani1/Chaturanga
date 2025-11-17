@@ -1,0 +1,93 @@
+
+
+AI-generated Key Takeaways
+
+Select platform: Android iOS Unity Flutter
+
+This guide explains how to enable test ads in your ads integration. It's important to enable test ads during development so that you can click them without charging Google advertisers. If you click too many ads without being in test mode, you risk your account being flagged for invalid activity.
+
+There are two ways to get test ads:
+
+Use one of Google's demo ad units.
+
+Use your own ad unit and enable test devices.
+
+Prerequisite
+
+Complete Get Started.
+
+Demo ad units
+
+The quickest way to enable testing is to use Google-provided demo ad units. These ad units are not associated with your AdMob account, so there's no risk of your account generating invalid traffic when using these ad units.
+
+Key Point: Make sure you replace these IDs with your own ad unit ID before publishing your app.
+
+Here are demo ad units that point to specific test creatives for each format:
+
+Ad format   Demo ad unit ID
+App Open ca-app-pub-3940256099942544/9257395921
+Adaptive Banner ca-app-pub-3940256099942544/9214589741
+Fixed Size Banner ca-app-pub-3940256099942544/6300978111
+Interstitial  ca-app-pub-3940256099942544/1033173712
+Rewarded Ads  ca-app-pub-3940256099942544/5224354917
+Rewarded Interstitial  ca-app-pub-3940256099942544/5354046379
+Native   ca-app-pub-3940256099942544/2247696110
+Native Video  ca-app-pub-3940256099942544/1044960115
+
+Enable test devices
+
+If you want to do more rigorous testing with production-looking ads, you can now configure your device as a test device and use your own ad unit IDs that you've created in the AdMob UI. Test devices can either be added in the AdMob UI or programmatically using Google Mobile Ads SDK.
+
+Follow the steps below to add your device as a test device.
+
+Key Point: Android emulators are automatically configured as test devices.
+
+Add your test device in the AdMob UI
+
+For a non-programmatic way to add a test device and test new or existing app builds, use the AdMob UI. Learn how.
+
+Key Point: New test devices typically start serving test ads in your app within 15 minutes, but it can also take up to 24 hours.
+
+Add your test device programmatically
+
+To register your test device, complete the following steps:
+
+Load your ads-integrated app and make an ad request.
+
+Check the logcat output for a message similar to the following, which shows you your device ID and how to add it as a test device:
+
+I/Ads: Use RequestConfiguration.Builder.setTestDeviceIds(Arrays.asList("33BE2250B43518CCDA7DE426D04EE231")) to get test ads on this device."Copy your test device ID to your clipboard.
+
+Modify your code to call RequestConfiguration.Builder.setTestDeviceIds() and pass in a list of your test device IDs.
+
+JavaKotlin
+
+List<String> testDeviceIds = Arrays.asList("TEST_DEVICE_ID"); RequestConfiguration configuration = new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build(); MobileAds.setRequestConfiguration(configuration);
+
+Replace TEST_DEVICE_ID with your test device ID.
+
+You can optionally check isTestDevice() to confirm that your device was properly added as a test device.
+
+Caution: Be sure to remove the code that sets these test device IDs before you release your app.
+
+Re-run your app. If the ad is a Google ad, you'll see a Test Ad label centered at the top of the ad (banner, interstitial, or rewarded video):
+
+￼
+
+Note: To see the Test Ad label, you need to be using an SDK version of 11.6.0 or higher.
+
+For native advanced ads, the headline asset is prepended with the string Test Ad.
+
+￼
+
+Ads with this Test Ad label are safe to click. Requests, impressions, and clicks on test ads won't show up in your account's reports.
+
+Note: Mediated ads do NOT render a Test Ad label. See the following section for details.
+
+Testing with mediation
+
+Google's sample ad units only show Google Ads. To test your AdMob Mediation configuration, you must use the enable test devices approach.
+
+Mediated ads do NOT render a Test Ad label. You are responsible for ensuring that test ads are enabled for each of your mediation networks so these networks don't flag your account for invalid activity. See each network's respective mediation guide for more information.
+
+If you aren't sure whether a mediation ad network adapter supports test ads, it is safest to avoid clicking on ads from that network during development. You can use the getMediationAdapterClassName() method on any of the ad formats to figure out which ad network served the current ad.

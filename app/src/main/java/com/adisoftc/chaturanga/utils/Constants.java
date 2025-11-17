@@ -2,10 +2,13 @@ package com.adisoftc.chaturanga.utils;
 
 public class Constants {
     public static final String BANNER_AD_UNIT_ID = "ca-app-pub-3940256099942544/6300978111";
+    public static final String ADAPTIVE_BANNER_AD_UNIT_ID = "ca-app-pub-3940256099942544/9214589741";
     public static final String INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712";
     public static final String REWARDED_AD_UNIT_ID = "ca-app-pub-3940256099942544/5224354917";
+    public static final String REWARDED_INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3940256099942544/5354046379";
     public static final String NATIVE_AD_UNIT_ID = "ca-app-pub-3940256099942544/2247696110";
-    public static final String APP_OPEN_AD_UNIT_ID = "ca-app-pub-3940256099942544/3419835294";
+    public static final String NATIVE_VIDEO_AD_UNIT_ID = "ca-app-pub-3940256099942544/1044960115";
+    public static final String APP_OPEN_AD_UNIT_ID = "ca-app-pub-3940256099942544/9257395921";
     
     public static final int SQUARE_SIZE = 80;
     public static final int BOARD_PADDING = 20;

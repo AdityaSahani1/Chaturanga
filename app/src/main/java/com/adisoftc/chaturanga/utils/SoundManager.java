@@ -4,6 +4,7 @@ import android.content.Context;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.content.SharedPreferences;
+import com.adisoftc.chaturanga.R;
 
 public class SoundManager {
     private static SoundPool soundPool;
@@ -35,6 +36,14 @@ public class SoundManager {
         if (soundPool == null) {
             initialize(context);
         }
+        
+        soundMove = soundPool.load(context, R.raw.sound_move, 1);
+        soundCapture = soundPool.load(context, R.raw.sound_capture, 1);
+        soundDiceRoll = soundPool.load(context, R.raw.sound_dice_roll, 1);
+        soundCheck = soundPool.load(context, R.raw.sound_check, 1);
+        soundGameOver = soundPool.load(context, R.raw.sound_game_over, 1);
+        soundVictory = soundPool.load(context, R.raw.sound_victory, 1);
+        soundButtonClick = soundPool.load(context, R.raw.sound_button_click, 1);
     }
     
     public static void playMoveSound() {

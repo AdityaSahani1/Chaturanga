@@ -12,6 +12,8 @@ import com.adisoftc.chaturanga.ai.ChaturangaAI;
 import com.adisoftc.chaturanga.logic.GameState;
 import com.adisoftc.chaturanga.models.*;
 import com.adisoftc.chaturanga.ui.BoardView;
+import com.adisoftc.chaturanga.utils.AdManager;
+import com.adisoftc.chaturanga.utils.SoundManager;
 
 public class GameActivity extends Activity {
     private BoardView boardView;
@@ -28,6 +30,9 @@ public class GameActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         
+        AdManager.initializeAds(this);
+        AdManager.loadInterstitialAd(this);
+        
         handler = new Handler();
         
         String modeStr = getIntent().getStringExtra("GAME_MODE");
@@ -41,6 +46,11 @@ public class GameActivity extends Activity {
         diceResultText = findViewById(R.id.dice_result_text);
         boardView = findViewById(R.id.board_view);
         diceButton = findViewById(R.id.dice_button);
+        
+        LinearLayout adContainer = findViewById(R.id.ad_container);
+        if (adContainer != null) {
+            AdManager.loadBannerAd(this, adContainer);
+        }
         
         // Set up board
         boardView.setGameState(gameState);
